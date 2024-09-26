@@ -24,6 +24,25 @@ nav {
     display: flex;
     justify-content: center;
     padding: 5px
+    border: 1px solid rgb(0, 255, 76);
+    background-image: url('../img/gifs/logo2.gif'); 
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat; 
+    background-color: rgba(0, 0, 0, 0.208); 
+    margin-top: 20px;
+    margin-left: 250px;
+    margin-right: 250px;
+
+    padding: 10px;
+    box-shadow: 
+        0 0 3px rgb(255, 255, 255), 
+        0 0 6px rgb(0, 255, 76); 
+    transition: 
+        box-shadow 0.3s, 
+        border 0.3s, 
+        transform 0.3s; 
+    border-radius: 15px; 
 }
 
 nav a {
@@ -48,30 +67,7 @@ nav a:hover {
      transform: scale(1.1);
 }
 
-
-.glowing-border-nav {
-    border: 1px solid rgb(0, 255, 76);
-    background-image: url('../img/gifs/logo2.gif'); 
-    background-size: contain;
-    background-position: left;
-    background-repeat: no-repeat; 
-    background-color: rgba(0, 0, 0, 0.208); 
-    margin-top: 20px;
-    margin-left: 250px;
-    margin-right: 250px;
-
-    padding: 10px;
-    box-shadow: 
-        0 0 3px rgb(255, 255, 255), 
-        0 0 6px rgb(0, 255, 76); 
-    transition: 
-        box-shadow 0.3s, 
-        border 0.3s, 
-        transform 0.3s; 
-    border-radius: 15px; 
-}
-
-.glowing-border-nav:hover {
+nav:hover {
     border: 2px solid rgb(180, 255, 202); 
     box-shadow: 
         0 0 6px rgb(41, 255, 105), 
