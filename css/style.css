@@ -11,30 +11,34 @@ html, body {
 }
 
 body {
+    height: 100vh;
+    margin: 0;
     background-image: url('../img/000625490015.png');
-    background-size: cover; 
-    background-position: center; 
+    background-size:auto;
+    background-position:center; 
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-color: rgb(118, 134, 129);
+
+    display: flex;
+    flex-direction: column;
 }
 
 
-
+/*--------------
+---- N A V -----
+----------------*/
 nav {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    padding: 5px
-    border: 1px solid rgb(0, 255, 76);
-    background-image: url('../img/gifs/logo2.gif'); 
-    background-size: contain;
-    background-position: left;
-    background-repeat: no-repeat; 
-    background-color: rgba(0, 0, 0, 0.208); 
-    margin-top: 20px;
-    margin-left: 250px;
-    margin-right: 250px;
+    gap: 25%;
 
-    padding: 10px;
+
+
+    border: .5px solid rgb(0, 255, 76); 
+    background-color: rgba(0, 0, 0, 0.208);
+
     box-shadow: 
         0 0 3px rgb(255, 255, 255), 
         0 0 6px rgb(0, 255, 76); 
@@ -43,11 +47,24 @@ nav {
         border 0.3s, 
         transform 0.3s; 
     border-radius: 15px; 
+
+    margin-top: 2%;
+    margin-bottom: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+
 }
+        nav:hover {
+            border: 1px solid rgb(180, 255, 202); 
+            box-shadow: 
+                0 0 6px rgb(41, 255, 105), 
+            transform: scale(1.9); 
+        }
+
+
 
 nav a {
     text-decoration: none;
-    margin: 0 90px;
     color: rgb(255, 255, 255);
     text-shadow:  
         0 0 6px rgb(0, 255, 76),
@@ -55,56 +72,92 @@ nav a {
     transition:
         transform 0.3s,
         text-shadow 0.3s;
-font-family: "neuropol-nova", sans-serif;
-        font-weight:900;
+    font-family: "neuropol-nova", sans-serif;
         font-style: normal;
-}
 
-nav a:hover {
-    text-shadow: 
-        0 0 6px rgb(0, 255, 76), 
-        0 0 12px rgb(0, 255, 76);
-     transform: scale(1.1);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    
+  
 }
+        nav a:hover {
+            text-shadow: 
+                0 0 6px rgb(0, 255, 76), 
+                0 0 12px rgb(0, 255, 76);
+            transform: scale(1.1);
+        }
 
-nav:hover {
-    border: 2px solid rgb(180, 255, 202); 
-    box-shadow: 
-        0 0 6px rgb(41, 255, 105), 
-    transform: scale(1.9); 
-}
+
+
 
 
 
 /*IMAGE*/
 
-.glowing-image {
-    margin-left: 330px;
-    border: 1px solid rgb(0, 255, 76);
-    background-color: rgba(0, 0, 0, 0.13);
-    padding: 20px;
-    box-shadow: 
-        0 0 3px rgb(255, 255, 255), 
-        0 0 6px rgb(0, 255, 76);
-    transition: 
-        box-shadow 0.3s, 
-        border 0.3s, 
-        transform 0.3s; 
-    border-radius: 15px; 
-    display: inline-block;
+body {
+
 
 }
 
-.glowing-image img{
-    display: block;
-    border-radius: 15px;
+#ParentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 
+        box-shadow 0.3s, 
+        border 0.3s, 
+        transform 0.3s;  
+    
+
+
+
+}
+
+
+#imageContainer {
+    display: flex;
+    max-width: 50%;
+    margin: auto;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+
+img{
+    border: .5px solid rgb(0, 255, 76);
+    background-color: rgba(0, 0, 0, 0.279);
+    box-shadow: 
+        0 0 3px rgb(255, 255, 255), 
+        0 0 6px rgb(0, 255, 76);
+    border-radius: 35px; 
+    max-width: 100%;
+    
+     padding: 3%;
+    
+}
+
+img:hover {
+    border: 1px solid rgb(180, 255, 202);
+    box-shadow: 
+        0 0 6px rgb(41, 255, 105),
+        
 }
 
 
 /* ABOUT ME */
+
+#AboutmeContainer {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+   padding-left: 15%;
+   padding-right: 15%;
+
+}
+
+
 p {
-    text-decoration: none;
-    margin: 0 90px;
     color: rgb(255, 255, 255);
     text-shadow:  
         0 0 6px rgb(0, 255, 76),
@@ -112,48 +165,71 @@ p {
     transition:
         transform 0.3s,
         text-shadow 0.3s;
+        border: 1px solid rgb(0, 255, 76); 
+        background-color: rgba(0, 0, 0, 0.13); 
+    
+        box-shadow: 
+            0 0 3px rgb(255, 255, 255), 
+            0 0 6px rgb(0, 255, 76); 
+        transition: 
+            box-shadow 0.3s,  
+            border 0.3s, 
+            transform 0.3s;
+        border-radius: 40px;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    
 }
 
-.glowing-border-aboutme {
-    border: 1px solid rgb(0, 255, 76); 
-    background-color: rgba(0, 0, 0, 0.13); 
-    margin-top: 20px;
-    margin-left: 300px;
-    margin-right: 300px;
 
-    padding: 10px;
-    box-shadow: 
-        0 0 3px rgb(255, 255, 255), 
-        0 0 6px rgb(0, 255, 76); 
-    transition: 
-        box-shadow 0.3s,  
-        border 0.3s, 
-        transform 0.3s;
-    border-radius: 15px;
-}
-
-.glowing-border-aboutme:hover {
+p:hover {
     border: 2px solid rgb(180, 255, 202);
     box-shadow: 
         0 0 6px rgb(41, 255, 105),
         
-    transform: scale(1.9);
+   
 }
 
 
 /* FOOTER */
 footer {
-    text-align: center;
     display: flex;
-    justify-content: center;
-    font-family: "neuropol-nova", sans-serif;
-    font-weight: 900;
-    font-style: normal;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    border: 1px solid rgb(0, 255, 76); 
+    background-color: rgba(0, 0, 0, 0.208);
+
+    box-shadow: 
+        0 0 3px rgb(255, 255, 255), 
+        0 0 6px rgb(0, 255, 76); 
+    border-radius: 15px; 
+
+   margin-left: 47%;
+   margin-right: 47%;
+
+   padding-top: .5%;
+   padding-bottom: .5%;
+   
+
+
+
+
 }
+        footer:hover {
+            border: 2px solid rgb(180, 255, 202);
+            box-shadow: 
+                0 0 6px rgb(41, 255, 105),
+        }
+
+
 
 footer a {
     text-decoration: none;
-    margin: 0 90px;
     color: rgb(255, 255, 255);
     text-shadow:  
         0 0 6px rgb(0, 255, 76),
@@ -161,47 +237,16 @@ footer a {
     transition:
         transform 0.3s,
         text-shadow 0.3s;
+    font-family: "neuropol-nova", sans-serif;
+        font-style: normal;
+
 
 }
-
-footer a:hover {
-    text-shadow: 
-        0 0 6px rgb(0, 255, 76), 
-        0 0 12px rgb(0, 255, 76);
-     transform: scale(1.1);
-}
-
-.glowing-border-footer {
-    border: 1px solid rgb(0, 255, 76);
-    background-size: contain;
-    background-position: left;
-    background-repeat: no-repeat; 
-    background-color: rgba(0, 0, 0, 0.13); 
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 570px;
-    margin-right: 570px;
-
-    padding: 10px;
-    box-shadow: 
-        0 0 3px rgb(255, 255, 255), 
-        0 0 6px rgb(0, 255, 76); 
-    transition: 
-        0.3s, border 0.3s, 0.3s;
-    border-radius: 15px;
-}
-
-.glowing-border-footer:hover {
-    border: 2px solid rgb(180, 255, 202);
-    box-shadow: 
-        0 0 6px rgb(41, 255, 105),
-}
+        footer a:hover {
+            text-shadow: 
+                0 0 6px rgb(0, 255, 76), 
+                0 0 12px rgb(0, 255, 76);
+            transform: scale(1.1);
+        }
 
 
-#ParentContainer {
-
-  display: flex;
-  flex-direction: row;
-  width: 90%;
-  margin: auto;
-}
