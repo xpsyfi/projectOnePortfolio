@@ -123,8 +123,12 @@ body {
     margin-bottom: 2%;
 }
 
+.image-wrapper {
+    position: relative;
+}
 
-img{
+
+#image img {
     border: .5px solid rgb(0, 255, 76);
     background-color: rgba(0, 0, 0, 0.279);
     box-shadow: 
@@ -142,6 +146,15 @@ img:hover {
     box-shadow: 
         0 0 6px rgb(41, 255, 105),
         
+}
+
+.overlay {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    height: 50Px;
+    border: none;
+    background: none;
 }
 
 
